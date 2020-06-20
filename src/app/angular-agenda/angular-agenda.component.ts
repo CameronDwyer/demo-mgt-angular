@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { TemplateHelper } from '@microsoft/mgt';
 
 @Component({
   selector: 'app-angular-agenda',
@@ -9,10 +10,14 @@ export class AngularAgendaComponent implements AfterViewInit {
   @ViewChild('myagenda') agendaElement: any;
   public output: string;
 
-  constructor() {}
+  constructor() {
+    /* let templateGlobalCtx: any;
+    templateGlobalCtx = TemplateHelper.globalContext;
+    templateGlobalCtx.onEventClick = (e) => { console.log('test'); }; */
+  }
 
   ngAfterViewInit() {
-    this.setTemplateContext();
+    // this.setTemplateContext();
   }
 
   public setTemplateContext() {
