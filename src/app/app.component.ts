@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Providers, MsalProvider, TemplateHelper } from '@microsoft/mgt';
+import { Providers, MsalProvider, TemplateHelper, ProviderState } from '@microsoft/mgt';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,11 @@ import { Providers, MsalProvider, TemplateHelper } from '@microsoft/mgt';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'demo-mgt-angular';
+  public title = 'demo-mgt-angular';
+
+  public isLoggedIn(){
+    return Providers.globalProvider.state === ProviderState.SignedIn;
+  }
 
   ngOnInit()
   {

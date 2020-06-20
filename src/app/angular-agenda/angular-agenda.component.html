@@ -1,6 +1,8 @@
 <mgt-agenda #myagenda group-by-day>
     <template data-type="event">
-            <div data-props="[[@click: onEventClick, innerHTML: event.subject]]"></div>
+            <div>Property binding: <span data-props="[[innerHTML: event.subject]]"></span></div>
+            <div>Event binding (Global Template Context): <span data-props="[[@click: globalClickEvent]]"><u>Click to write to console</u></span></div>
+            <div>Event binding (Component Template Context): <span data-props="[[@click: componentEventClick]]"><u>Click to write to console</u></span></div>
     </template>
     <template data-type="no-data">
         <div>
