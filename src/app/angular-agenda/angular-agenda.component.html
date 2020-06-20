@@ -1,7 +1,6 @@
 <mgt-agenda #myagenda group-by-day>
     <template data-type="event">
-            <!-- <div (click)="onEventClick()" data-props="[[@click: onEventClick]]">📅[[event.subject]]</div> -->
-            <div data-props="[[@click: openWebLink, innerHTML: event.subject]]"></div>
+            <div data-props="[[@click: onEventClick, innerHTML: event.subject]]"></div>
     </template>
     <template data-type="no-data">
         <div>
@@ -9,5 +8,3 @@
       </div>
     </template>
 </mgt-agenda>
-<button (click)="setTemplateContext()">set template context</button>
-<div>{{output}}</div>
