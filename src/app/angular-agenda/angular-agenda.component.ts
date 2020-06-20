@@ -15,7 +15,7 @@ export class AngularAgendaComponent implements OnInit, AfterViewInit, AfterConte
     let templateGlobalCtx: any;
     templateGlobalCtx = TemplateHelper.globalContext;
     templateGlobalCtx.globalClickEvent = (e) => {
-      console.log('globalClickEvent');
+      console.log('globalClickEvent fired');
     };
   }
 
@@ -44,7 +44,7 @@ export class AngularAgendaComponent implements OnInit, AfterViewInit, AfterConte
     if (this.agendaElement) {
       this.agendaElement.templateContext = {
         componentClickEvent: (e: any) => {
-          console.log('componentClickEvent');
+          console.log('componentClickEvent fired');
         }
       }
     } else {
